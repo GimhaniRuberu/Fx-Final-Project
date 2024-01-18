@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Pane" prefHeight="638.0" prefWidth="949.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterAccountsFormController">
+   <children>
+      <JFXTextField fx:id="txtUserName" focusColor="BLACK" layoutX="355.0" layoutY="299.0" prefHeight="41.0" prefWidth="384.0" promptText="Username" style="-fx-background-color: #abb8c3;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtEmail" focusColor="BLACK" layoutX="355.0" layoutY="365.0" prefHeight="41.0" prefWidth="384.0" promptText="E-mail" style="-fx-background-color: #abb8c3;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtContactNum" focusColor="BLACK" layoutX="355.0" layoutY="488.0" prefHeight="41.0" prefWidth="384.0" promptText="Contact Number" style="-fx-background-color: #abb8c3;" unFocusColor="WHITE" />
+      <JFXButton layoutX="806.0" layoutY="544.0" onAction="#RegisterBtn" style="-fx-background-color: #fb6c8f;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="txtJobRole" focusColor="BLACK" layoutX="355.0" layoutY="431.0" prefHeight="41.0" prefWidth="384.0" promptText="Job Roll" style="-fx-background-color: #abb8c3;" />
+       <ImageView fx:id="userImg" fitHeight="206.0" fitWidth="199.0" layoutX="463.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+           <Image url="/img/user.png" />
+       </ImageView>
+      <GridPane layoutY="2.0" prefHeight="73.0" prefWidth="1094.0" style="-fx-background-color: #fb6c8f;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="0.0" prefWidth="63.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1031.0" minWidth="10.0" prefWidth="1031.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+             <JFXButton contentDisplay="GRAPHIC_ONLY" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="20.0">
+               <graphic>
+                     <ImageView fitHeight="39.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="/img/bck.png" />
+                         </image>
+                     </ImageView>
+               </graphic>
+             </JFXButton>
+            <Label fx:id="lblRegister" alignment="CENTER" contentDisplay="CENTER" prefHeight="84.0" prefWidth="1031.0" style="-fx-background-color: #fb6c8f;" text="Register Accounts" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

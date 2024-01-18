@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane fx:id="DashBoardPane" prefHeight="724.0" prefWidth="1124.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="9.0" layoutY="21.0" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="20.0">
+         <graphic>
+            <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/img/bck.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="155.0" layoutY="30.0" onAction="#PlaceOrderBtnOnAction" prefHeight="62.0" prefWidth="430.0" style="-fx-background-color: #00d084;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="155.0" layoutY="147.0" onAction="#OrderDetailsBtnOnAction" prefHeight="62.0" prefWidth="430.0" style="-fx-background-color: #0693e3#0693e3;" text="Order Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="155.0" layoutY="262.0" onAction="#ManageItemsBtnOnAction" prefHeight="62.0" prefWidth="430.0" style="-fx-background-color: #9900ef;" text="Manage Items" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="155.0" layoutY="378.0" onAction="#ManageReportsBtnOnAction" prefHeight="62.0" prefWidth="430.0" style="-fx-background-color: #eb144c;" text="Manage Reports" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="155.0" layoutY="490.0" onAction="#RegisterAccountsBtnOnAction" prefHeight="62.0" prefWidth="430.0" style="-fx-background-color: #fb6c8f;" text="Register Accounts" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="155.0" layoutY="603.0" onAction="#CreateAccountsBtnOnAction" prefHeight="62.0" prefWidth="430.0" style="-fx-background-color: #fcb900;" text="Create Accounts" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
