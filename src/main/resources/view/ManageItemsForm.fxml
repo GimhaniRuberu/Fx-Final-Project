@@ -39,16 +39,12 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="965.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnDelete" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #ff0004;" text="Delete">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
       <TableView fx:id="tblItem" layoutX="81.0" layoutY="260.0" prefHeight="433.0" prefWidth="935.0">
         <columns>
           <TableColumn fx:id="colCategory" prefWidth="239.0" text="Category" />
-          <TableColumn fx:id="colCode" minWidth="0.0" prefWidth="271.0" text="Item Code" />
-            <TableColumn fx:id="colName" prefWidth="424.0" text="Item Name" />
+          <TableColumn fx:id="colCode" minWidth="0.0" prefWidth="191.0" text="Item Code" />
+            <TableColumn fx:id="colName" prefWidth="265.0" text="Item Name" />
+            <TableColumn fx:id="option" prefWidth="265.0" text="Option" />
         </columns>
       </TableView>
       <Label fx:id="lblItem" layoutX="922.0" layoutY="23.0" prefHeight="31.0" prefWidth="134.0" text="Manage Item">

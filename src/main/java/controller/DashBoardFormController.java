@@ -120,4 +120,14 @@ public class DashBoardFormController {
             throw new RuntimeException(e);
         }
     }
+
+    public void CustomerBtnOnAction(javafx.event.ActionEvent actionEvent) {
+        Stage stage = (Stage) DashBoardPane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/CustomerForm.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

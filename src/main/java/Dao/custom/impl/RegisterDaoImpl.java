@@ -31,6 +31,7 @@ public class RegisterDaoImpl implements RegisterDao {
         return false;
     }
 
+
     @Override
     public List<Register> getAll() throws SQLException, ClassNotFoundException {
         return null;

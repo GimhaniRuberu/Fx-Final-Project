@@ -1,6 +1,6 @@
 package Dao;
 
-import Bo.SuperBo;
+
 
 import java.sql.SQLException;
 import java.util.List;
