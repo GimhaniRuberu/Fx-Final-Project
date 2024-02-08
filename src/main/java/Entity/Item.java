@@ -16,4 +16,5 @@ public class Item {
     private String itemCode;
     private String category;
     private String name;
+//    private String des;
 }

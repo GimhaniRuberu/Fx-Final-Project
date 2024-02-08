@@ -56,7 +56,7 @@ public class CustomerFormController {
     private void loadCustomerTable() {
         ObservableList<CustomerTm> tmList = FXCollections.observableArrayList();
         try {
-            List<CustomerDto> dtoList  = customerBo.allCustomer();
+            List<CustomerDto> dtoList  = customerBo.allCustomers();
             for (CustomerDto dto:dtoList) {
                 Button btn= new Button("Delete");
                 CustomerTm tm = new CustomerTm(

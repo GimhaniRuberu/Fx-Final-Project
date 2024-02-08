@@ -5,6 +5,7 @@ import Dao.util.HibernateUtil;
 import Entity.Register;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -34,6 +35,10 @@ public class RegisterDaoImpl implements RegisterDao {
 
     @Override
     public List<Register> getAll() throws SQLException, ClassNotFoundException {
-        return null;
+        Session session = HibernateUtil.getSession();
+        Query query = session.createQuery("FROM Register");
+        List<Register> list = query.list();
+        session.close();
+        return list;
     }
 }

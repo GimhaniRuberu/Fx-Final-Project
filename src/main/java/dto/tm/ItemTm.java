@@ -1,5 +1,7 @@
 package dto.tm;
 
+import com.jfoenix.controls.JFXButton;
+import javafx.scene.control.Button;
 import lombok.*;
 
 import javax.persistence.Id;
@@ -13,4 +15,6 @@ public class ItemTm {
     private String code;
     private String category;
     private String name;
+//    private String des;
+    private Button btn;
 }

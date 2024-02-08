@@ -9,50 +9,50 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="795.0" prefWidth="1096.0" style="-fx-background-color: #b3b7bb;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemsFormController">
+<AnchorPane fx:id="pane" prefHeight="802.0" prefWidth="1158.0" style="-fx-background-color: #b3b7bb;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemsFormController">
    <children>
-      <Label alignment="CENTER" layoutX="97.0" layoutY="52.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #0d51c3;" text="Category" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="369.0" layoutY="48.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #0d51c3;" text="Category" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <JFXComboBox fx:id="txtCategory" focusColor="#0d51c3" layoutX="97.0" layoutY="99.0" prefHeight="31.0" prefWidth="187.0" />
-      <Label alignment="CENTER" layoutX="404.0" layoutY="52.0" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: #0d51c3;" text="Item Code" textFill="WHITE">
+      <JFXComboBox fx:id="txtCategory" focusColor="#0d51c3" layoutX="369.0" layoutY="98.0" prefHeight="31.0" prefWidth="187.0" />
+      <Label alignment="CENTER" layoutX="65.0" layoutY="49.0" prefHeight="33.0" prefWidth="110.0" style="-fx-background-color: #0d51c3;" text="Item Code" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtCode" focusColor="#0d51c3" layoutX="394.0" layoutY="99.0" />
-      <JFXTextField fx:id="txtName" focusColor="#0d51c3" layoutX="679.0" layoutY="98.0" />
-      <Label alignment="CENTER" layoutX="679.0" layoutY="52.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0d51c3;" text="Item Name" textFill="WHITE">
+      <JFXTextField fx:id="txtCode" focusColor="#0d51c3" layoutX="65.0" layoutY="103.0" />
+      <JFXTextField fx:id="txtName" focusColor="#0d51c3" layoutX="689.0" layoutY="97.0" />
+      <Label alignment="CENTER" layoutX="687.0" layoutY="45.0" prefHeight="33.0" prefWidth="116.0" style="-fx-background-color: #0d51c3;" text="Item Name" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="839.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnUpdate" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #06a008;" text="Update">
+      <Button layoutX="1026.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnUpdate" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #06a008;" text="Update">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="718.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #fcb900;" text="Save">
+      <Button layoutX="876.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnSave" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #fcb900;" text="Save">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
       <TableView fx:id="tblItem" layoutX="81.0" layoutY="260.0" prefHeight="433.0" prefWidth="935.0">
         <columns>
-          <TableColumn fx:id="colCategory" prefWidth="239.0" text="Category" />
-          <TableColumn fx:id="colCode" minWidth="0.0" prefWidth="191.0" text="Item Code" />
+          <TableColumn fx:id="colCode" prefWidth="239.0" text="Item Code" />
+          <TableColumn fx:id="colCategory" minWidth="0.0" prefWidth="191.0" text="Category" />
             <TableColumn fx:id="colName" prefWidth="265.0" text="Item Name" />
             <TableColumn fx:id="option" prefWidth="265.0" text="Option" />
         </columns>
       </TableView>
-      <Label fx:id="lblItem" layoutX="922.0" layoutY="23.0" prefHeight="31.0" prefWidth="134.0" text="Manage Item">
+      <Label fx:id="lblItem" alignment="CENTER_RIGHT" layoutX="983.0" layoutY="2.0" prefHeight="35.0" prefWidth="169.0" text="Manage Item" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
       </Label>
-      <Button layoutX="957.0" layoutY="718.0" mnemonicParsing="false" onAction="#btnBack" prefHeight="51.0" prefWidth="116.0" style="-fx-background-color: #ea245a;" text="Back">
+      <Button layoutX="1010.0" layoutY="724.0" mnemonicParsing="false" onAction="#btnBack" prefHeight="51.0" prefWidth="116.0" style="-fx-background-color: #ea245a;" text="Back">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>

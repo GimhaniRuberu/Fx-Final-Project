@@ -1,9 +1,6 @@
 package Dao.util;
 
-import Entity.ChangePw;
-import Entity.Customer;
-import Entity.Register;
-import net.sf.jasperreports.components.items.Item;
+import Entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -24,6 +21,8 @@ public class HibernateUtil {
                 .addAnnotatedClass(ChangePw.class)
                 .addAnnotatedClass(Item.class)
                 .addAnnotatedClass(Customer.class)
+                .addAnnotatedClass(PlaceOrder.class)
+                .addAnnotatedClass(Orders.class)
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();

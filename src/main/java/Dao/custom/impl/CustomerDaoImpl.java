@@ -60,5 +60,10 @@ public class CustomerDaoImpl implements CustomerDao {
         session.close();
         return list;
     }
+    @Override
+    public Customer get(String name) throws SQLException, ClassNotFoundException {
+        Session session = HibernateUtil.getSession();
+        return session.find(Customer.class, name);
+    }
 
 }

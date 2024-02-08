@@ -44,8 +44,9 @@ public class CustomerBoImpl implements CustomerBo {
         return customerDao.delete(code);
     }
 
+
     @Override
-    public List<CustomerDto> allCustomer() throws SQLException, ClassNotFoundException {
+    public List<CustomerDto> allCustomers() throws SQLException, ClassNotFoundException {
         List<Customer> entityList = customerDao.getAll();
         List<CustomerDto> list = new ArrayList<>();
         for (Customer customer:entityList) {
