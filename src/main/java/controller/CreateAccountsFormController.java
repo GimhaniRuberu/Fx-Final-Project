@@ -15,6 +15,7 @@ public class CreateAccountsFormController {
     public JFXTextField txtChangePassword;
     public JFXTextField txtConfirmPassword;
 
+
     public void CreateBtn(ActionEvent actionEvent) {
         Stage stage = (Stage) pane.getScene().getWindow();
         try {

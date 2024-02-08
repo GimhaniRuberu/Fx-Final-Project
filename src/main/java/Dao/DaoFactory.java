@@ -29,6 +29,8 @@ public class DaoFactory {
                 return (T) new PlaceOrderDaoImpl();
             case ORDERS:
                 return (T) new OrderDaoImpl();
+            case CREATEUSER:
+                return (T) new CreateUserDaoImpl();
         }
         return null;
     }

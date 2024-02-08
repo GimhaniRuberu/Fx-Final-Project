@@ -44,13 +44,12 @@ public class RegisterAccountsFormController {
     public void RegisterBtn(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
 
         RegisterDto dto = new RegisterDto(
-                txtUserName.getText(),
                 txtEmail.getText(),
                 txtContactNum.getText(),
-                txtJobRole.getValue().toString()
+                txtJobRole.getValue().toString(),
+                txtUserName.getText()
 
         );
-
 
         boolean isSaved = registerBo.saveOrder(dto);
         if (isSaved){

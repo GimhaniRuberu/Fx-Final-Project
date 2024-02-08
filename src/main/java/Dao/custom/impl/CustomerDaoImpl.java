@@ -29,12 +29,12 @@ public class CustomerDaoImpl implements CustomerDao {
     public boolean update(Customer entity) throws SQLException, ClassNotFoundException {
 
         Session session = HibernateUtil.getSession();
-
         Transaction transaction = session.beginTransaction();
         Customer customer = session.find(Customer.class, entity.getCustomerId());
         customer.setCustomerId(entity.getCustomerId());
         customer.setName(entity.getName());
         customer.setContactNo(entity.getContactNo());
+        customer.setEmail(entity.getEmail());
         session.save(customer);
         transaction.commit();
         session.close();

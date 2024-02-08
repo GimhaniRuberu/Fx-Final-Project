@@ -13,4 +13,5 @@ public class RegisterTm {
     private String email;
     private String jobRole;
     private String contNo;
+
 }

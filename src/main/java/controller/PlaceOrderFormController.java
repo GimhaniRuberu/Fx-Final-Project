@@ -205,7 +205,6 @@ public class PlaceOrderFormController {
                     txtDes.getText()
             ));
         }
-
         PlaceOrderDto dto = new PlaceOrderDto(
                 lblOrdId.getText(),
                 Double.parseDouble(txtAdvance.getText()),

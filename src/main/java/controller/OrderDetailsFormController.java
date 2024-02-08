@@ -82,7 +82,7 @@ public class OrderDetailsFormController {
         loadTblOrd();
 
 
-        comAdditionalItem.getItems().addAll("Electrical", "Electronic");
+        comAdditionalItem.getItems().addAll("Tv Board Rs.4500.00","Pc Board Rs.7500.00","Fiber Cabel Rs.2000.00","Antena Rs.8000.00","Battery Rs.2000.00","Ic Sz1 Rs.500.00","Ic Sz2 Rs.500.00","Ic Sz3 Rs.500.00","Ele Wire Rs.500.00");
 
         tblOrd.getSelectionModel().selectedItemProperty().addListener((observableValue, oldValue, newValue) -> {
             setData((OrderTm) newValue);

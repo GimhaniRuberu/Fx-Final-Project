@@ -8,8 +8,10 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 public class RegisterDto {
-    private String userName;
+
     private String email;
-    private String jobRole;
     private String contNo;
+    private String jobRole;
+    private String userName;
 }
+

@@ -11,10 +11,10 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @ToString
 @NoArgsConstructor
+
 public class ItemTm {
     private String code;
     private String category;
     private String name;
-//    private String des;
     private Button btn;
 }

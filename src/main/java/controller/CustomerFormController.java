@@ -20,8 +20,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CustomerFormController {
     public AnchorPane pane;
@@ -129,28 +132,60 @@ public class CustomerFormController {
             ));
         }
 
-        CustomerDto dto = new CustomerDto(
-                txtCusId.getText(),
-                txtName.getText(),
-                txtContactNum.getText(),
-                txtEmail.getText()
+        String customerId = txtCusId.getText();
+        String customerName = txtName.getText();
+        String customerContact = txtContactNum.getText();
+        String customerEmail = txtEmail.getText();
 
-        );
+        if (isValidCustomerId(customerId)) {
+            if (isValidContactNumber(customerContact)) {
+                if (isValidEmail(customerEmail)) {
+                    CustomerDto dto = new CustomerDto(
+                    txtCusId.getText(),
+                    txtName.getText(),
+                    txtContactNum.getText(),
+                    txtEmail.getText()
 
-        try {
-            boolean isSaved = customerBo.saveCustomer(dto);
-            if (isSaved){
-                new Alert(Alert.AlertType.INFORMATION, "Item Saved!").show();
-                loadCustomerTable();
-                clearFields();
-            }else{
-                new Alert(Alert.AlertType.ERROR, "Something went wrong!").show();
+);
+                    try {
+                        boolean isSaved = customerBo.saveCustomer(dto);
+                        if (isSaved) {
+                            new Alert(Alert.AlertType.INFORMATION, "Customer Saved!").show();
+                            loadCustomerTable();
+                            clearFields();
+                        }
+                    } catch (SQLIntegrityConstraintViolationException ex) {
+                        new Alert(Alert.AlertType.ERROR, "Duplicate Entry").show();
+                    } catch (ClassNotFoundException | SQLException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    new Alert(Alert.AlertType.ERROR, "Invalid Email!").show();
+                }
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Invalid Contact Number").show();
             }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Invalid Customer ID!").show();
         }
+    }
+
+    private boolean isValidCustomerId(String customerId) {
+        return customerId.matches("^C\\d{3}$");
+    }
+
+    private boolean isValidContactNumber(String contactNumber) {
+        String contactRegex = "^0\\d{9}$";
+        Pattern pattern = Pattern.compile(contactRegex);
+        Matcher matcher = pattern.matcher(contactNumber);
+        return matcher.matches();
+    }
+
+    private boolean isValidEmail(String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&-]+(?:\\.[a-zA-Z0-9_+&-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
     }
 
     public void searchBtn(ActionEvent actionEvent) {

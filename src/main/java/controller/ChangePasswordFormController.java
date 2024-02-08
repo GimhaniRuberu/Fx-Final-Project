@@ -33,6 +33,7 @@ public class ChangePasswordFormController {
     private ChangeBo changeBo = new ChangeBoImpl();
 
     public void SubmitBtn(ActionEvent actionEvent) throws SQLException, ClassNotFoundException {
+
         System.out.println(txtEmail.getText());
         System.out.println(txtChangePassword.getText());
         System.out.println(txtConfirmPassword.getText());
@@ -47,6 +48,17 @@ public class ChangePasswordFormController {
             new Alert(Alert.AlertType.INFORMATION, "Success!").show();
         }else{
             new Alert(Alert.AlertType.ERROR, "Something went wrong!").show();
+        }
+    }
+
+    public void backButtonOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) pane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/DashBoardForm.fxml"))));
+            stage.centerOnScreen();
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

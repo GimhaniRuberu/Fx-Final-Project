@@ -19,6 +19,7 @@ public class BoFactory {
             case CHANGEPW: return (T) new ChangeBoImpl();
             case ITEM: return (T) new ItemBoImpl();
             case ORDERS: return (T) new OrderBoImpl();
+            case CREATEUSER: return (T) new CreateUserBoImpl();
 
          //   case CUSTOMER: return (T) new CustomerBoImpl();
         //   case ORDER_DETAIL: return (T) new OrderDetailBoImpl();
